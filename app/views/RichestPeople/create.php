@@ -2,31 +2,31 @@
 <?= var_dump($_POST); ?>
 <body>
     
-<form action="<?= URLROOT; ?>/countries/create" method="POST">
+<form action="<?= URLROOT; ?>/RichestPeople/create" method="POST">
     <table>
         <tbody>
             <tr>
                 <td>
-                    <label for="name">Land naam</label>
+                    <label for="name">naam</label>
                     <input type="text" name="name" id="name" value="">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="capitalCityy">Hoodstad</label>
-                    <input type="text" name="capitalCity" id="capitalCity" value="Amsterrdam">
+                    <label for="nettoWorth">nettoWorth</label>
+                    <input type="number" name="nettoWorth" id="nettoWorth" value="">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="continent">continent</label>
-                    <input type="text" name="continent" id="continent" value="">
+                    <label for="age">age</label>
+                    <input type="number" name="age" id="age" value="">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="population">populatie</label>
-                    <input type="number" name="population" id="population" value="">
+                    <label for="company">company</label>
+                    <input type="text" name="company" id="company" value="">
                 </td>
             </tr>
             <tr>
