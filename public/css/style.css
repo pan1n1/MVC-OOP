@@ -1,0 +1,27 @@
+h3 {
+  background-color: red;
+}
+
+body{
+  background-color: beige;
+}
+
+/*ai */
+
+main {
+  background-color: blue;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+div {
+  background-color: red;
+}
+
+h3 {
+  color: green;
+}
+
+h1 {
+  color: green;
+}
