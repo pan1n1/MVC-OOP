@@ -1,17 +1,17 @@
 main {
-    background-color: blue;
+    background-color: rgb(169, 169, 169);
     margin: 0 auto;
     max-width: 80%;
 }
 
 div {
-    background-color: red;
+    background-color: rgb(247, 247, 247);
 }
 
 h3 {
-    color: green;
+    color: rgb(205, 205, 205);
 }
 
 h1 {
-    color: green;
+    color: rgb(200, 200, 200);
 }

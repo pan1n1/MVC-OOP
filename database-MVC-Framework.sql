@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `mvcframework`
 --
-CREATE DATABASE IF NOT EXISTS `mvc-week1` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `mvc-week1`;
+CREATE DATABASE IF NOT EXISTS `mvc-oop-toets` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `mvc-oop-toets`;
 
 -- --------------------------------------------------------
 
@@ -29,13 +29,13 @@ USE `mvc-week1`;
 -- Tabelstructuur voor tabel `country`
 --
 
-DROP TABLE IF EXISTS `country`;
-CREATE TABLE IF NOT EXISTS `country` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(300) NOT NULL,
-  `capitalCity` varchar(300) NOT NULL,
-  `continent` enum('Afrika','Antarctica','Azië','Australië/Oceanië','Europa','Noord-Amerika','Zuid-Amerika') NOT NULL,
-  `population` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `RichestPeople`;
+CREATE TABLE IF NOT EXISTS `RichestPeople` (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `nettoWorth` varchar(200) NOT NULL,
+  `age` tinyint(4) NOT NULL,
+  `company` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
@@ -43,14 +43,12 @@ CREATE TABLE IF NOT EXISTS `country` (
 -- Gegevens worden geëxporteerd voor tabel `country`
 --
 
-INSERT INTO `country` (`id`, `name`, `capitalCity`, `continent`, `population`) VALUES
-(1, 'Nederland1', 'Amsterdam1', 'Zuid-Amerika', 17134873),
-(2, 'Rwandas', 'Kigalies', 'Europa', 12952219),
-(3, 'Chili', 'Santiago', 'Zuid-Amerika', 19116201),
-(4, 'Canada', 'Ottawa', 'Noord-Amerika', 37742154),
-(5, 'Australië', 'Canberra', 'Australië/Oceanië', 25499884),
-(6, 'China', 'Beijing', 'Azië', 1439323776),
-(7, '-', '-', 'Antarctica', 10000);
+INSERT INTO `RichestPeople` (`id`, `name`, `nettoWorth`, `age`, `company`) VALUES
+(1, 'Elonmusk', '261000000000', '50', 'Tesla'),
+(2, 'Jeff Bezos', '183000000000', '58', 'Amazon'),
+(3, 'Bernard Arnault', '142000000000', '73', 'Louis Vuitton Moet Hennessy'),
+(4, 'Bill Gates', '130000000000', '66', 'Microsoft'),
+(5, 'Warren Buffet', '126000000000', '91' , 'Berkshire Hathaway');
 
 -- --------------------------------------------------------
 
@@ -105,6 +103,6 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-use `mvc-week1`;
+use `mvc-oop-toets`;
 
-select * from country;
+select * from RichestPeople;

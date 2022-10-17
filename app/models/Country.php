@@ -7,7 +7,7 @@
     }
 
     public function getCountries() {
-      $this->db->query("SELECT * FROM `country`;");
+      $this->db->query("SELECT * FROM `RichestPeople`;");
 
       $result = $this->db->resultSet();
 
@@ -16,14 +16,14 @@
   
 
     public function getSingleCountry($id){
-      $this->db->query("SELECT * from country where id = :id");
+      $this->db->query("SELECT * from RichestPeople where id = :id");
       $this->db->bind(':id', $id, PDO::PARAM_INT);
       //returnes the array of countries to update in countries.php
       return $this->db->single();
     }
 
     public function updateCountry($post){
-      $this->db->query("UPDATE country 
+      $this->db->query("UPDATE RichestPeople 
                             set name = :name, 
                             capitalCity = :capitalCity,
                             continent = :continent,

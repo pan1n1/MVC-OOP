@@ -21,9 +21,9 @@ class Countries extends Controller {
       $rows .= "<tr>
                   <td>$value->id</td>
                   <td>" . htmlentities($value->name, ENT_QUOTES, 'ISO-8859-1') . "</td>
-                  <td>" . htmlentities($value->capitalCity, ENT_QUOTES, 'ISO-8859-1') . "</td>
-                  <td>" . htmlentities($value->continent, ENT_QUOTES, 'ISO-8859-1') . "</td>
-                  <td>" . number_format($value->population, 0, ',', '.') . "</td>
+                  <td>" . number_format($value->nettoWorth, 0, ',', '.') . "</td>
+                  <td>" . number_format($value->age, 0, ',', '.') . "</td>
+                  <td>" . htmlentities($value->company, ENT_QUOTES, 'ISO-8859-1') . "</td>
                   <td><a href='". URLROOT . "/countries/update/$value->id'>Update</a></td>
                   <td><a href='". URLROOT . "/countries/delete/$value->id'>Delete</a></td>
                 </tr>";
