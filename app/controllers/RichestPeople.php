@@ -31,7 +31,7 @@ class RichestPeople extends Controller {
 
 
     $data = [
-      'title' => '<h1>Landenoverzicht</h1>',
+      'title' => '<h1>Rijkste mensen</h1>',
       'RichestPeople' => $rows
     ];
     $this->view('RichestPeople/index', $data);
@@ -48,7 +48,7 @@ class RichestPeople extends Controller {
     }else{
       $row = $this->richestModel->getSingleCountry($id);
       $data = [
-      'title' => '<h1>update landenoverzicht</h1>',
+      'title' => '<h1>update Rijkste mensen</h1>',
       'row' => $row
     ];
     $this->view("RichestPeople/update", $data); 
